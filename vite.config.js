@@ -5,7 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'github-pages' ? '/emberfall/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -16,4 +17,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-})
+}))

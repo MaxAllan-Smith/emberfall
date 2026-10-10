@@ -42,3 +42,21 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## GitHub Pages
+
+The GitHub Actions workflow builds and deploys `dist` when changes are pushed to
+`main`. Pull requests and other branches are built without deploying.
+In the repository's **Settings > Pages**, set the source to **GitHub Actions**;
+publishing the source branch directly will not run the Vue build.
+
+The site is hosted at https://maxallan-smith.github.io/emberfall/.
+The `github-pages` build mode sets the asset base to `/emberfall/` and uses hash
+routing (for example, `/emberfall/#/play`) so navigation and refreshes work on
+GitHub Pages. Local development and normal production builds retain history routing.
+
+To build the Pages version locally:
+
+```sh
+npm run build -- --mode github-pages
+```
