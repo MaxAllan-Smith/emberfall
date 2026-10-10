@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #120d0b;
+  color: #f5e6cc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --ember-foreground: #f5e6cc;
+  --ember-panel: #1d1411;
+  --ember-panel-alt: #120d0b;
+  --ember-orange: #f97316;
+  --ember-red: #991b1b;
+  --ember-gold: #d4a017;
+  --ember-wood: #2a1810;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(249, 115, 22, 0.15), transparent 30%),
+    linear-gradient(180deg, #1b120f 0%, #120d0b 100%);
+  color: var(--ember-foreground);
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.04em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.35);
+  color: #fff7ed;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
